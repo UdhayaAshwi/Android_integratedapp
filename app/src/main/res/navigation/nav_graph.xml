@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2_fragment">
+    <fragment
+        android:id="@+id/home2_fragment"
+        android:name="udhaya.example.bottomnav.ui.view.fragment.Login_fragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_home2_fragment_to_bnv_fragment"
+            app:destination="@id/bnv_fragment">
+            <argument
+                android:name="bnv"
+                android:defaultValue=" "
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/bnv_fragment"
+        android:name="udhaya.example.bottomnav.ui.view.fragment.bnv"
+        android:label="fragment_bnv"
+        tools:layout="@layout/fragment_recyclerview" >
+        <action
+            android:id="@+id/action_bnv_fragment_to_home2_fragment"
+            app:destination="@id/home2_fragment" />
+        <action
+            android:id="@+id/action_bnv_fragment_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_bnv_fragment_to_fragmentActivity"
+            app:destination="@id/fragmentActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorite"
+        android:name="udhaya.example.bottomnav.ui.view.fragment.Favorite_fragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favorite_to_bnv_fragment3"
+            app:destination="@id/bnv_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="udhaya.example.bottomnav.ui.view.fragment.Settings_fragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_to_bnv_fragment"
+            app:destination="@id/bnv_fragment" />
+    </fragment>
+    <activity
+        android:id="@+id/fragmentActivity"
+        android:name="udhaya.example.bottomnav.ui.view.activity.FragmentActivity"
+        android:label="activity_fragment"
+        tools:layout="@layout/activity_viewpager" />
+</navigation>
