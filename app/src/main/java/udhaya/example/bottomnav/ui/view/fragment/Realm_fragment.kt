@@ -52,9 +52,6 @@ class Realm_fragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//      views?.binding?.apply {
-//            vm = RealmVM
-//        }
         RealmVM.writeSuccess.observe(viewLifecycleOwner, Observer {
 
             if (RealmVM.writeSuccess.value == true) {
