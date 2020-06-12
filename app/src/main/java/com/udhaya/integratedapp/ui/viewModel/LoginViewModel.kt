@@ -25,14 +25,14 @@ class LoginViewModel : ViewModel() {
 
     fun checkBlank(username: String, password: String): Int {
         //Function to check if any of the input field in login screen is blank
-        var returnval: Int = 0
+        var isEmptyFlag: Int = 0
         if (username.isEmpty() || password.isEmpty()) {
-            returnval = 1
+            isEmptyFlag = 1
         }
         if (password.isEmpty()) {
-            returnval = 2
+            isEmptyFlag = 2
         }
-        return returnval
+        return isEmptyFlag
     }
 
     fun generateList(size: Int): ArrayList<DataSource> {
