@@ -6,7 +6,7 @@
     app:startDestination="@id/home2_fragment">
     <fragment
         android:id="@+id/home2_fragment"
-        android:name="udhaya.example.bottomnav.ui.view.fragment.Login_fragment"
+        android:name="com.udhaya.integratedapp.ui.view.fragment.LoginFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_login" >
         <action
@@ -20,9 +20,9 @@
     </fragment>
     <fragment
         android:id="@+id/bnv_fragment"
-        android:name="udhaya.example.bottomnav.ui.view.fragment.bnv"
+        android:name="com.udhaya.integratedapp.ui.view.fragment.PlacesListFragment"
         android:label="fragment_bnv"
-        tools:layout="@layout/fragment_recyclerview" >
+        tools:layout="@layout/fragment_placeslist" >
         <action
             android:id="@+id/action_bnv_fragment_to_home2_fragment"
             app:destination="@id/home2_fragment" />
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/favorite"
-        android:name="udhaya.example.bottomnav.ui.view.fragment.Favorite_fragment"
+        android:name="com.udhaya.integratedapp.ui.view.fragment.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" >
         <action
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/settings"
-        android:name="udhaya.example.bottomnav.ui.view.fragment.Settings_fragment"
+        android:name="com.udhaya.integratedapp.ui.view.fragment.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -53,7 +53,7 @@
     </fragment>
     <activity
         android:id="@+id/fragmentActivity"
-        android:name="udhaya.example.bottomnav.ui.view.activity.FragmentActivity"
+        android:name="com.udhaya.integratedapp.ui.view.activity.WeatherandSaveDataActivity"
         android:label="activity_fragment"
         tools:layout="@layout/activity_viewpager" />
 </navigation>

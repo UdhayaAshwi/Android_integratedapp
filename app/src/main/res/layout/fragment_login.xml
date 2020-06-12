@@ -7,7 +7,7 @@
 
         <variable
             name="viewmodel"
-            type="udhaya.example.bottomnav.ui.viewModel.Login_ViewModel" />
+            type="com.udhaya.integratedapp.ui.viewModel.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/blurred"
-        tools:context=".ui.view.fragment.Login_fragment">
+        tools:context=".ui.view.fragment.LoginFragment">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -34,7 +34,6 @@
                 android:id="@+id/username_text_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:hint="Username">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -42,18 +41,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:text="@={viewmodel.username}" />
+                    android:text="@={viewmodel.userName}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_text_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:hint="Password">
 
                 <com.google.android.material.textfield.TextInputEditText
-
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
